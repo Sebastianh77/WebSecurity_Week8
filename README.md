@@ -29,7 +29,7 @@ Steps to recreate:
 Vulnerability #2: SQL Injection (SQLi)
 ![](BlueVulnerability2.gif)
 Steps to recreate:
-* Login using given credentials in one browser.
+* Login using given credentials.
 * Go to sales people highlight on any of the users and click show.
 * Once you are in next to id in the URL write 'OR 1=1 --' 
 * This will automatically take you to the person at the top of the list (The person with id=1 which is enough to show the
@@ -37,7 +37,16 @@ Steps to recreate:
 
 ## Green
 
-Vulnerability #1: __________________
+Vulnerability #1: Username Enumeration
+![](GreenVulnerability1.gif)
+Steps to recreate:
+* Login using given credentials.
+* Once you are logged in check the list of users and take note of the usernames.
+* Logout and try to login with one of the usernames.
+* Now try a random username not on the list and see if there is a difference.
+* The difference here is that when you type the correct username with no password you get a bolded error message but
+when the username is not on the list you get the error message without the bolded text.
+
 
 Vulnerability #2: __________________
 
