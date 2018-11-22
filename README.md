@@ -75,17 +75,23 @@ that should not be public.
 Vulnerability #2: Cross-Site Request Forgery (CSRF)
 ![](RedVulnerability2.gif)
 Steps to recreate:
-* Create a form changing information on one of the usernames.
+* Create a form changing information on one of the salespeople.
 * Log in using Credentials.
 * Load Form on same browser while logged in.
-* Changes should take place.
-
+* Changes should take place after reloading the salespeople page.
+* Below is an image of the form used in the gif demo.
+![](ScreenshotofHTMLform.png)
 ## Notes
-
-Describe any challenges encountered while doing the work
+Concept Review Questions:
+* For me, The easier attack to implement where user enumerated and IDOR. User enumerated in particular was easier since we are already 
+given the pperson login which makes testing easier since we already know one username. SQLI and XSS were more challenging for me mainly due to the fact that finding the place where the vulnerabilities could occur can be time consuming.
+* After verifing every entrance to the site is secure, one Very important step to take to prevent Username Enumeration is to never give potential attackers any hints that they correctly guessed something. The error message for getting the user name and wrong password should be the same as the message for getting nothing wrong.
+* Using AND  instead of OR can only work if you know want the first condition to be true. OR is used more than and for SQLI since usually you want the first condition to be ignored (False) and the SQLI condition to be executed. So with that in mind, AND cannot be a substitute for OR since they do different things.
+* XSS attackers might include something ind the link that would entice the user to click on it faster or try to force the xss attack in a place the user visit often. 
+* One Way to message the XSS form to the admin would be to send the admin a link to the form through a message through the site. If the classmate clicks on the link, the changes will be made.
+* Comparing Session Hijacking/Fixation, In the assignment I choose hijacking since we had access to an username. However in most cases hijacking is more difficult since you need to know the username login to execute it. For Fixation, its just a matter of tricking the user into using your session id.  
 
 ## License
-
     Copyright [2018] [Sebastian Henriquez]
 
     Licensed under the Apache License, Version 2.0 (the "License");
