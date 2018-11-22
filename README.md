@@ -26,8 +26,14 @@ Steps to recreate:
 * Use "public/hacktools/change_session_id.php" to change the session id to the one in the previous browser.
 * Go back to the main page and you should be logged in.
 
-Vulnerability #2: 
-
+Vulnerability #2: SQL Injection (SQLi)
+![](BlueVulnerability2.gif)
+Steps to recreate:
+* Login using given credentials in one browser.
+* Go to sales people highlight on any of the users and click show.
+* Once you are in next to id in the URL write 'OR 1=1 --' 
+* This will automatically take you to the person at the top of the list (The person with id=1 which is enough to show the
+  SQLi Vulnerability.
 
 ## Green
 
