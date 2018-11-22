@@ -62,10 +62,23 @@ Steps to recreate:
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Insecure Direct Object Reference (IDOR)
+![](RedVulnerability1.gif)
+Steps to recreate:
+* Login using given credentials.
+* Once you are logged in check the list of sales people and take note of the names that are suppose to be private.
+* Logout and go to the public site.
+* Click on Find a Sales person and click on any of them.
+* On the URL change the id to search for users you are not suppose to see. When changing the id to 10 or 11 you will find the users
+that should not be public.
 
-Vulnerability #2: __________________
-
+Vulnerability #2: Cross-Site Request Forgery (CSRF)
+![](RedVulnerability2.gif)
+Steps to recreate:
+* Create a form changing information on one of the usernames.
+* Log in using Credentials.
+* Load Form on same browser while logged in.
+* Changes should take place.
 
 ## Notes
 
