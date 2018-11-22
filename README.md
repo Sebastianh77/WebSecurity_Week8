@@ -48,7 +48,16 @@ Steps to recreate:
 when the username is not on the list you get the error message without the bolded text.
 
 
-Vulnerability #2: __________________
+Vulnerability #2:  Cross-Site Scripting (XSS)
+![](GreenVulnerability2.gif)
+Steps to recreate:
+* Go to Public Site.
+* Go to Contact us.
+* Write a name and email and on feedback write and XSS alert message like '<script>alert('Sebastian found the XSS!');</script>'.
+* Summit response and go to login page.
+* Login using given credentials.
+* Once you are logged in go to feedback tab.
+* There you should see the XSS message.
 
 
 ## Red
