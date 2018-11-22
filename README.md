@@ -16,9 +16,17 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: Section Hijacking/Fixation
+![](BlueVulnerability1.gif)
+    Steps to recreate:
+        1. Login using given credentials in one browser.
+        2. Use "public/hacktools/change_session_id.php" in this browser to see the session id.
+        3. Copy the session id.
+        4. Go to a different browser and go to the page without login in.
+        5. Use "public/hacktools/change_session_id.php" to change the session id to the one in the previous browser.
+        6. Go back to the main page and you should be logged in.
 
-Vulnerability #2: __________________
+Vulnerability #2: 
 
 
 ## Green
