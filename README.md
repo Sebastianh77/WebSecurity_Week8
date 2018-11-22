@@ -32,7 +32,7 @@ Steps to recreate:
 * Login using given credentials.
 * Go to sales people highlight on any of the users and click show.
 * Once you are in next to id in the URL write 'OR 1=1 --' 
-* This will automatically take you to the person at the top of the list (The person with id=1 which is enough to show the
+* This will automatically take you to the person at the top of the list (The person with id=1) which is enough to show the
   SQLi Vulnerability.
 
 ## Green
